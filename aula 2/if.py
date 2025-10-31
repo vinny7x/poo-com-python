@@ -9,5 +9,7 @@ print("A média é: ",media)
 
 if media >= 7:
     print("Aprovado")
-else:
+elif media < 5:
     print("Reprovado")
+else:
+    print("Em recuperação")
