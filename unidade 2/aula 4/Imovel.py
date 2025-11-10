@@ -21,8 +21,32 @@ class ImovelResidencial(Imovel):
 
 class ImovelComercial(Imovel):
     ...
+
+
+class ImoveRural:
+    def __init__(self, hectares = '', curral = '', produtiva = True):
+        self.hectares = hectares
+        self.curral = curral
+        self.produtiva = produtiva
+    def MesDePlantacao(self, mes):
+        match int(mes):
+            case 1: print('Milho')
+            case 2: print('Feijão')
+            case 3: print('Soja')
+            case other: print('Algodão')
+
+class Fazenda(Imovel, ImoveRural):
+    ...
+
+
+fazenda = Fazenda('Fazenda Modelo', 'GO', 1500000)
+fazenda.detalhar()
+print(fazenda.calcularImposto())
+fazenda.MesDePlantacao(2)
+
+
 casa = ImovelResidencial('Minha casa', 'BA', 300000)
-casa.detalhar()
+# casa.detalhar()
 
 clinica = ImovelComercial('Clinica X', 'SP', 800000)
 # clinica.detalhar()
