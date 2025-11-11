@@ -2,10 +2,10 @@ from abc import ABC, abstractclassmethod
 class Imovel(ABC):
     def __init__(self, nome, uf, valor, endereco = '', area = ''):
         self._nome = nome
-        self.uf = uf
-        self.valor = valor
-        self.endereco = endereco
-        self.area = area
+        self._uf = uf
+        self._valor = valor
+        self._endereco = endereco
+        self._area = area
 
         @property
         def nome(self):
@@ -14,13 +14,13 @@ class Imovel(ABC):
         @nome.setter
         def nome(self, nome):
             self._nome = nome
-        '''
-    def getNome(self):
-        return self.nome
+        @property
+        def uf(self):
+            return self._uf
 
-    def setNome(self, nome):
-        self.nome = nome
-        '''
+        @uf.setter
+        def uf(self, uf):
+            self._nome = _uf
     def detalhar(self):
         print(self.__dict__)
 
@@ -33,20 +33,20 @@ class Imovel(ABC):
 class ImovelResidencial(Imovel):
     def __init__(self, nome, uf, valor, endereco = '', area = ''):
         super().__init__( nome, uf, valor, endereco = '', area = '')
-        self.quartos = 0
-        self.piscina = False
+        self._quartos = 0
+        self._piscina = False
     def aluguelSugerido(self):
-        return self.valor * 0.01
+        return self._valor * 0.01
 
 class ImovelComercial(Imovel):
     def aluguelSugerido(self):
-        return self.valor * 0.015
+        return self._valor * 0.015
 
 class ImoveRural:
     def __init__(self, hectares = '', curral = '', produtiva = True):
-        self.hectares = hectares
-        self.curral = curral
-        self.produtiva = produtiva
+        self._hectares = hectares
+        self._curral = curral
+        self._produtiva = produtiva
     def MesDePlantacao(self, mes):
         match int(mes):
             case 1: print('Milho')
@@ -57,28 +57,10 @@ class Fazenda(Imovel, ImoveRural):
     def aluguelSugerido(self):
         return self.valor * 0.025
 
-'''
-fazenda = Fazenda('Fazenda Modelo', 'GO', 1500000)
-fazenda.detalhar()
-print(fazenda.calcularImposto())
-fazenda.MesDePlantacao(2)
-'''
 
 casa = ImovelResidencial('Minha casa', 'BA', 300000)
 casa.nome = 'Casa legal'
+casa.uf = 'SP'
 print(casa.nome)
-# casa.setNome('Casa legal')
-# print(casa.getNome())
 casa.detalhar()
 print(casa.aluguelSugerido())
-
-clinica = ImovelComercial('Clinica X', 'SP', 800000)
-# clinica.detalhar()
-'''  # Não é possível instanciar uma classe abstrata
-imovel = Imovel('Solar do Cerrado', 'DF', 500000)
-imovel.detalhar()
-'''
-'''
-imovel.endereco = 'ABC'
-imovel.area = '2000'
-'''
