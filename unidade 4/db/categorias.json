@@ -1,8 +1,101 @@
 [
     {
-        "nome": "Eletr\u00f4nico"
+        "nome": "Roupas"
     },
     {
-        "nome": "Eletr\u00f4nico"
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
+    },
+    {
+        "codigo": "001",
+        "nome": "Celular",
+        "quantidade": 100,
+        "valor": 2000
     }
 ]
