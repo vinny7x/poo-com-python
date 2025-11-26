@@ -7,19 +7,21 @@ class AbstractCrud:
         lista = self.consultar()
         lista.append(self.detalhar())
 
-        with open('db/categorias.json', 'w') as file:
+        with open(self.arquivo, 'w') as file:
             json.dump(lista, file, indent=4)
 
         print('Categoria cadastrada!')
-    def listarTodos(self):
-        lista = self.consultar()
+
+    @classmethod
+    def listarTodos(cls):
+        lista = cls.consultar()
 
         for i, p in enumerate(lista):
             print(f'{i} - {p}')
-
-    def consultar(self):
+    @classmethod
+    def consultar(cls):
         try:    
-            with open('db/categorias.json') as file:
+            with open(cls.arquivo) as file:
                 return json.load(file)
         except Exception:
             return []
