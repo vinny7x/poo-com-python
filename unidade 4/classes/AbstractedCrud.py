@@ -1,5 +1,6 @@
 import json
-class AbstractCrud:
+from abc import ABC
+class AbstractCrud(ABC):
     def detalhar(self):
         return self.__dict__
 
@@ -10,7 +11,15 @@ class AbstractCrud:
         with open(self.arquivo, 'w') as file:
             json.dump(lista, file, indent=4)
 
-        print('Categoria cadastrada!')
+        print('cadastrado!')
+    
+    def alterar(self, item):
+        lista = self.consultar()
+        lista[item] = self.detalhar()
+        with open(self.arquivo, 'w') as file:
+            json.dump(lista, file, indent=4)
+
+        print('alterado!')
 
     @classmethod
     def listarTodos(cls):
@@ -19,9 +28,10 @@ class AbstractCrud:
         for i, p in enumerate(lista):
             print(f'{i} - {p}')
     @classmethod
-    def consultar(cls):
+    def consultar(cls, item = None):
         try:    
             with open(cls.arquivo) as file:
-                return json.load(file)
+                lista =  json.load(file)
+                return lista[item] if isinstance(item, int) else lista
         except Exception:
             return []
