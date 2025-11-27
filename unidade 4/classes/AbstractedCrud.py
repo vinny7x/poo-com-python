@@ -21,6 +21,14 @@ class AbstractCrud(ABC):
         print('operação realizada com sucesso')
 
     @classmethod
+    def excluir(cls, item):
+        lista = cls.consultar()
+        del lista[item]
+        with open(cls.arquivo, 'w') as file:
+            json.dump(lista, file, indent=4)
+        print('operação realizada com sucesso')
+
+    @classmethod
     def listarTodos(cls):
         lista = cls.consultar()
 

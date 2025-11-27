@@ -4,11 +4,5 @@
         "nome": "Celular",
         "quantidade": 1000,
         "valor": 2000
-    },
-    {
-        "codigo": "002",
-        "nome": "Celular",
-        "quantidade": 60,
-        "valor": 4000
     }
 ]

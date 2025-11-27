@@ -1,11 +1,14 @@
 from classes.Produto import Produto
 from classes.Categoria import Categoria
 
-item = 0
-itemAlterar = Produto.consultar(item)
+Produto.excluir(1)
 
-produto = Produto(itemAlterar['codigo'], itemAlterar['nome'], 1000,2000)
-produto.alterar(item)
+
+# item = 0
+# itemAlterar = Produto.consultar(item)
+
+# produto = Produto(itemAlterar['codigo'], itemAlterar['nome'], 1000,2000)
+# produto.alterar(item)
 
 
 # print(Produto.consultar())
