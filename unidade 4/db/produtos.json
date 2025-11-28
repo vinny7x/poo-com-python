@@ -1,8 +1,14 @@
 [
     {
-        "codigo": "002",
+        "codigo": "0001",
+        "nome": "T\u00eanis",
+        "quantidade": "10",
+        "valor": "1000"
+    },
+    {
+        "codigo": "0002",
         "nome": "Celular",
-        "quantidade": 1000,
-        "valor": 2000
+        "quantidade": 5,
+        "valor": 2300
     }
 ]
